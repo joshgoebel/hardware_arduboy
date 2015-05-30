@@ -21,8 +21,35 @@ arduboy.upload.wait_for_upload_port=true
 
 arduboy.bootloader.tool=arduino:avrdude
 arduboy.bootloader.low_fuses=0xff
+# Low fuses
+# 1 / Divide clock by 8
+# 1 / Clock output on PORTC7
+# 1 / Select start-up time
+# 1 /   14CK + 65ms
+# 1 / Select Clock source (CKSEL3)
+# 1 /   8.0 - 16.0Mhz  (CKSEL2)
+# 1 / CKSEL1
+# 1 / CKSEL0
 arduboy.bootloader.high_fuses=0xd8
+# High fuses
+# 1 / Enable OCD - (disabled)
+# 1 / Enable JTAG - (disabled)
+# 0 / Enable Serial Program and Data Downloading - (enabled)
+# 1 / Watchdog Timer always on - (disabled)
+# 1 / EEPROM memory is preserved through the Chip Erase - (not preserved)
+# 0 / BOOTSZ1 - 4,096 bytes bootloader size
+# 0 / BOOTSZ0
+# 0 / BOOTRST - reset vector is bootloader
 #arduboy.bootloader.extended_fuses=0xcb
+# Extended fuses
+# 1 / -
+# 1 / -
+# 0 / -
+# 0 / -
+# 1 / Hardware Boot Enable
+# 0 / Brown-out Detector trigger level (BODLEVEL2)
+# 1 /   2.6v (BODLEVEL1)
+# 1 / BODLEVEL0
 arduboy.bootloader.file=caterina/Caterina-Leonardo.hex
 arduboy.bootloader.unlock_bits=0x3F
 arduboy.bootloader.lock_bits=0x2F
