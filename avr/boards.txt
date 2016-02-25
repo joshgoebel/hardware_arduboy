@@ -1,15 +1,16 @@
-#menu.cpu=Speed
+#menu.cpu=Run Arduboy
 menu.version=Version
 
 ##############################################################
 
 arduboy.name=Arduboy
-#arduboy.menu.cpu.speed16mhz=16Mhz
+#arduboy.menu.cpu.speed16mhz=at full speed (16MHz)
 #arduboy.menu.cpu.speed16mhz.build.f_cpu=16000000L
 #arduboy.menu.cpu.speed16mhz.bootloader.extended_fuses=0xcb
-#arduboy.menu.cpu.speed8mhz=8Mhz
+#arduboy.menu.cpu.speed8mhz=with speed reduced to 8MHz
 #arduboy.menu.cpu.speed8mhz.build.f_cpu=8000000L
 #arduboy.menu.cpu.speed8mhz.bootloader.extended_fuses=0xcb
+#arduboy.menu.cpu.speed8mhz.build.extra_flags=-DARDUBOY_16MHZ_HW_CLOCK=yes {build.usb_flags}
 
 arduboy.menu.version.arduboy10=Release 1.0
 arduboy.menu.version.arduboy10.build.extra_flags=-DARDUBOY_10=yes {build.usb_flags}
@@ -33,7 +34,7 @@ arduboy.bootloader.low_fuses=0xff
 # 1 / Select start-up time
 # 1 /   14CK + 65ms
 # 1 / Select Clock source (CKSEL3)
-# 1 /   8.0 - 16.0Mhz  (CKSEL2)
+# 1 /   8.0 - 16.0MHz  (CKSEL2)
 # 1 / CKSEL1
 # 1 / CKSEL0
 arduboy.bootloader.high_fuses=0xd8
